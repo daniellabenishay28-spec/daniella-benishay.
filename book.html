@@ -92,7 +92,10 @@
       </div>
     </section>
 
-    <section class="section-univers-livre" data-champ-section="livre">
+    <!-- Section facultative : n'apparaît que si le champ "universe" du
+         livre (js/books.js) est rempli. Masquée proprement sinon (pas de
+         texte de remplacement). -->
+    <section class="section-univers-livre" data-champ-section="livre" data-champ-section-optionnelle="univers">
       <div class="container">
         <div class="section-univers-livre__contenu au-scroll">
           <p class="kicker kicker--centre">L'univers</p>
@@ -102,7 +105,9 @@
       </div>
     </section>
 
-    <section class="extrait" data-champ-section="livre">
+    <!-- Section facultative : n'apparaît que si le champ "excerpt" du
+         livre (js/books.js) est rempli. Masquée proprement sinon. -->
+    <section class="extrait" data-champ-section="livre" data-champ-section-optionnelle="excerpt">
       <div class="container">
         <div class="au-scroll">
           <p class="kicker kicker--centre">Extrait</p>

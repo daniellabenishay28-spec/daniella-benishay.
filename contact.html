@@ -62,10 +62,12 @@
           <div class="contact-bloc au-scroll">
             <h3>Écrire directement</h3>
             <p>Pour toute demande — presse, édition, collaboration ou simple message de lecteur — voici comment me joindre.</p>
+            <!-- Rempli automatiquement depuis js/contact.js (champ "email").
+                 Masqué proprement si ce champ est laissé vide. -->
             <div class="contact-liste">
-              <div class="contact-item">
+              <div class="contact-item" data-contact-email-item hidden>
                 <span class="contact-item__label">Email</span>
-                <span class="contact-item__valeur placeholder-texte">Adresse à ajouter</span>
+                <a href="#" class="contact-item__valeur" data-contact-email-lien></a>
               </div>
             </div>
           </div>
@@ -73,23 +75,13 @@
           <div class="contact-bloc au-scroll" style="--retard:0.1s">
             <h3>Me suivre ailleurs</h3>
             <p>Retrouvez-moi également sur les réseaux, en plus de Wattpad.</p>
-            <div class="contact-liste">
+            <div class="contact-liste" data-contact-liste-sociaux>
               <div class="contact-item">
                 <span class="contact-item__label">Wattpad</span>
                 <a href="https://www.wattpad.com/user/deliaben16?utm_source=android&amp;utm_medium=link&amp;utm_campaign=invitefriends" class="contact-item__valeur" target="_blank" rel="noopener noreferrer">@deliaben16</a>
               </div>
-              <div class="contact-item">
-                <span class="contact-item__label">Instagram</span>
-                <span class="contact-item__valeur placeholder-texte">Compte à ajouter</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-item__label">TikTok</span>
-                <span class="contact-item__valeur placeholder-texte">Compte à ajouter</span>
-              </div>
-              <div class="contact-item">
-                <span class="contact-item__label">Goodreads</span>
-                <span class="contact-item__valeur placeholder-texte">Profil à ajouter</span>
-              </div>
+              <!-- Les réseaux supplémentaires (Instagram, TikTok, Goodreads...)
+                   sont générés automatiquement ici depuis js/contact.js. -->
             </div>
           </div>
         </div>
@@ -133,6 +125,7 @@
   <div class="curseur-point" aria-hidden="true"></div>
   <div class="curseur-anneau" aria-hidden="true"></div>
 
+  <script src="js/contact.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
